@@ -1,0 +1,21 @@
+html{
+    font-family: monospace;
+    background-color: white;
+}
+body{
+    width: 80%;
+    margin: auto;
+    background-color: antiquewhite;
+}
+.header{
+    width: 80%;
+    margin:auto;
+    padding-top:1em;
+}
+.projects-table{
+    width: 80%;
+    margin: auto; 
+}
+.projects-table{
+    padding-bottom: 1em;
+}
