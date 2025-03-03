@@ -1,21 +1,31 @@
 html{
     font-family: monospace;
-    background-color: white;
+    background-color: antiquewhite;
+    font-size: larger;
 }
 body{
     width: 80%;
     margin: auto;
-    background-color: antiquewhite;
+    white-space: nowrap;
 }
 .header{
-    width: 80%;
+    font-size: large;
+    width: 50%;
     margin:auto;
     padding-top:1em;
+    display: inline-block;
 }
 .projects-table{
-    width: 80%;
-    margin: auto; 
-}
-.projects-table{
+    margin: auto;
     padding-bottom: 1em;
+}
+.contact{
+    text-align: right;
+}
+.contact-button{
+    width: 2em;
+    vertical-align: middle;
+}
+a{
+    text-decoration: none;
 }
