@@ -11,6 +11,10 @@ async function fetch_projects() {
 
 let project_div_base = document.createElement('div');
 project_div_base.classList = 'project-div'
+let project_title_base = document.createElement('h3');
+project_title_base.classList = 'project-title'
+let project_desc_base = document.createElement('p');
+project_desc_base.classList = 'project-desc'
 
 /**/
 document.addEventListener('DOMContentLoaded', () => {
@@ -19,8 +23,20 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(data);
         for(let i = 0; i < projects.length; i++)
         {
+            //instantiate a clone of project_div_base
             let project_div = project_div_base.cloneNode();
-            project_div.innerHTML = projects[i].name;
+
+            //title
+            let project_title = project_title_base.cloneNode();
+            project_title.innerHTML = projects[i].name;
+            project_div.appendChild(project_title);
+
+            //description
+            let project_desc = project_desc_base.cloneNode();
+            project_desc.innerHTML = projects[i].description;
+            project_div.appendChild(project_desc);
+            
+            //append div to table
             document.getElementById("projects-table").appendChild(project_div);
         }
         
