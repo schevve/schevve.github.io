@@ -1,6 +1,7 @@
 html{
     font-family: monospace;
-    background-color: antiquewhite;
+    background-color: rgb(43, 43, 43);
+    color: antiquewhite;
     font-size: larger;
 }
 body{
@@ -9,7 +10,7 @@ body{
     white-space: nowrap;
 }
 .header{
-    background-color: white;
+    background-color:rgb(22, 22, 22);
     margin: auto;
 }
 .header-content{
@@ -32,6 +33,7 @@ body{
 }
 .contacts{
     text-align: right;
+    filter: invert(1);
 }
 .about-button{
     width: 2em;
@@ -39,4 +41,9 @@ body{
 }
 a{
     text-decoration: none;
+}
+.project-div{
+    width: 40%;
+    display: inline-block;
+    text-align: center;
 }
