@@ -40,7 +40,7 @@ body{
 .project-div{
     flex: 1 1 300px;
     white-space: normal;
-    min-width: 15em;
+    min-width: 20em;
     /*width: 48%;*/
     height: 10em;
     background-color: rgb(22, 22, 22);
@@ -49,7 +49,8 @@ body{
     text-align: justify;
 }
 .project-title{
-    text-align: center;
+    text-align: left;
+    padding: 1em;
 }
 .project-desc{
     padding-right: 5%;
@@ -65,4 +66,25 @@ body{
 }
 a{
     text-decoration: none;
+}
+a:visited{
+    color: rgb(218, 187, 128);
+}
+a:hover{
+    color: white
+}
+.newtab-icon{
+    display: inline-block;
+    width: 2em;
+    vertical-align: middle;
+    text-align: right;
+    filter: invert(1);
+    padding: 1em;
+}
+.project-div-half{
+    width: 50%;
+    display: inline-block;
+    margin: auto;
+    white-space: nowrap;
+    text-align: right;
 }
