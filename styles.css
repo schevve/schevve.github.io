@@ -4,25 +4,35 @@ html{
     font-size: larger;
 }
 body{
-    width: 80%;
+    width: 100%;
     margin: auto;
     white-space: nowrap;
 }
 .header{
+    background-color: white;
+    margin: auto;
+}
+.header-content{
+    width: 80%;
+    margin: auto;
+}
+.headerhalf{
     font-size: large;
     width: 50%;
     margin:auto;
     padding-top:1em;
+    padding-bottom:1em;
     display: inline-block;
 }
 .projects-table{
+    width: 80%;
     margin: auto;
     padding-bottom: 1em;
 }
-.contact{
+.contacts{
     text-align: right;
 }
-.contact-button{
+.contacts-button{
     width: 2em;
     vertical-align: middle;
 }
