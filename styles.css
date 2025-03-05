@@ -1,7 +1,7 @@
 html{
     font-family: monospace;
     background-color: rgb(43, 43, 43);
-    color: antiquewhite;
+    color: rgb(218, 187, 128);
     font-size: larger;
 }
 body{
@@ -33,7 +33,7 @@ body{
 }
 .contacts{
     text-align: right;
-    filter: invert(1);
+    filter: invert(1) sepia(1);
 }
 .about-button{
     width: 2em;
@@ -43,7 +43,8 @@ a{
     text-decoration: none;
 }
 .project-div{
-    width: 40%;
+    width: 50%;
     display: inline-block;
     text-align: center;
+    margin: auto;
 }
