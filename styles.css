@@ -34,16 +34,18 @@ body{
 .projects-table{
     display: flex;
     flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-between;
 }
 .project-div{
     white-space: normal;
-    width: 50%;
+    min-width: 15em;
+    width: 48%;
     height: 10em;
     background-color: rgb(22, 22, 22);
     border-style: solid;
     border-color: rgb(218, 187, 128);
     text-align: justify;
-    margin: auto;
 }
 .project-title{
     text-align: center;
