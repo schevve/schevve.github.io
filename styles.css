@@ -42,7 +42,7 @@ body{
     white-space: normal;
     min-width: 20em;
     /*width: 48%;*/
-    height: 10em;
+    height: 14em;
     background-color: rgb(22, 22, 22);
     border-style: solid;
     border-color: rgb(218, 187, 128);
@@ -55,6 +55,7 @@ body{
 .project-desc{
     padding-right: 5%;
     padding-left: 5%;
+    margin-block-start: 0;
 }
 .contacts{
     text-align: right;
@@ -66,6 +67,7 @@ body{
 }
 a{
     text-decoration: none;
+    overflow: hidden;
 }
 a:visited{
     color: rgb(218, 187, 128);
