@@ -80,7 +80,6 @@ a:hover{
     width: 2em;
     vertical-align: middle;
     text-align: right;
-    filter: invert(1);
     padding: 1em;
 }
 .project-div-half{
