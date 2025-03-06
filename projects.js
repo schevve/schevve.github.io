@@ -9,6 +9,7 @@ async function fetch_projects() {
     }
 }
 
+// I don't want anyone to see this mess
 let project_div_a_container_base = document.createElement('a');
 project_div_a_container_base.classList = 'project-div'
 let project_div_base = document.createElement('div');
@@ -19,9 +20,8 @@ newtab_img_base.src = 'static/NewTab.png';
 newtab_img_base.classList = 'newtab-icon'
 let project_desc_base = document.createElement('p');
 project_desc_base.classList = 'project-desc'
+// uhh
 
-
-/**/
 document.addEventListener('DOMContentLoaded', () => {
     fetch_projects().then(data => {
         var projects = data;
@@ -66,10 +66,3 @@ document.addEventListener('DOMContentLoaded', () => {
         
     });
 });
-/**/
-/*
-fetch_projects().then(data => {
-    var projects = data;
-    console.log(projects.length);
-});
-*/
