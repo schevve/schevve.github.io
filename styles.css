@@ -35,11 +35,11 @@ body{
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 .project-div{
     white-space: normal;
-    width: 30em;
+    width: 32%;
     min-width: 30em;
     height: 15em;
     background-color: rgb(22, 22, 22);
