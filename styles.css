@@ -38,11 +38,10 @@ body{
     justify-content: space-between;
 }
 .project-div{
-    flex: 1 1 300px;
     white-space: normal;
-    min-width: 20em;
-    /*width: 48%;*/
-    height: 14em;
+    width: 30em;
+    min-width: 30em;
+    height: 15em;
     background-color: rgb(22, 22, 22);
     border-style: solid;
     border-color: rgb(218, 187, 128);
@@ -53,19 +52,20 @@ body{
     padding: 1em;
 }
 .project-desc{
-    padding-right: 5%;
-    padding-left: 5%;
+    padding-right: 1rem;
+    padding-left: 1rem;
     margin-block-start: 0;
 }
 .contacts{
     text-align: right;
-    filter: invert(1) sepia(1);
+    filter: sepia(1);
 }
 .about-button{
     width: 2em;
     vertical-align: middle;
 }
 a{
+    color: rgb(218, 187, 128);
     text-decoration: none;
     overflow: hidden;
 }
