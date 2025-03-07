@@ -20,6 +20,8 @@ body{
 .header-content{
     width: 80%;
     margin: auto;
+    height: 10em;
+    display: flex;
 }
 .headerhalf{
     font-size: large;
@@ -28,7 +30,6 @@ body{
     padding-top:1em;
     padding-bottom:1em;
     display: inline-block;
-    vertical-align: middle;
 }
 
 a{

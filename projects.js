@@ -20,7 +20,6 @@ newtab_img_base.src = 'static/NewTab.png';
 newtab_img_base.classList = 'newtab-icon'
 let project_desc_base = document.createElement('p');
 project_desc_base.classList = 'project-desc'
-// uhh
 
 document.addEventListener('DOMContentLoaded', () => {
     fetch_projects().then(data => {
