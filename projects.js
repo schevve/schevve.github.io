@@ -56,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
             project_div.appendChild(project_desc);
 
             project_desc = project_desc_base.cloneNode();
+            project_desc.classList += " creation-date";
             let creation_date = new Date(projects[i].created_at);
             project_desc.innerHTML += creation_date.toLocaleDateString();
             project_div.appendChild(project_desc);

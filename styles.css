@@ -78,12 +78,13 @@ flex chaos
     flex-basis: 100%;
     white-space: normal;
     width:auto;
-    height: 10em;
+    height: 11.5em;
     background-color: rgb(22, 22, 22);
     border-style: solid;
     border-color: rgb(218, 187, 128);
     text-align: justify;
     box-sizing: border-box;
+    position: relative;
 }
 .project-title{
     text-align: left;
@@ -96,6 +97,12 @@ flex chaos
     padding-right: 1rem;
     padding-left: 1rem;
     margin-block-start: 0;
+    max-height: 3.5em;
+    overflow: hidden;
+}
+.project-desc.creation-date{
+    position: absolute;
+    bottom: 0;
 }
 .project-div-half{
     
