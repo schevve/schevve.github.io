@@ -104,16 +104,18 @@ flex chaos
     position: absolute;
     bottom: 0;
 }
+.project-info-container{
+    display: flex;
+    flex-wrap: wrap;
+}
 .project-div-half{
-    
-    display: inline-block;
     margin: auto;
     white-space: nowrap;
-    text-align: right;
 }
 .project-div-half.left{
-    width: 66%;
+    width: 75%;
 }
 .project-div-half.right{
-    width: 34%;
+    width: 25%;
+    text-align: right;
 }

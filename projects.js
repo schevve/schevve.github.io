@@ -9,66 +9,34 @@ async function fetch_projects() {
     }
 }
 
-// I don't want anyone to see this mess
-let project_div_a_container_base = document.createElement('a');
-project_div_a_container_base.classList = 'project-box';
-let project_div_base = document.createElement('div');
-let project_title_base = document.createElement('h3');
-project_title_base.classList = 'project-title'
-let newtab_img_base = document.createElement('img');
-newtab_img_base.src = 'static/NewTab.png';
-newtab_img_base.classList = 'newtab-icon';
-let project_desc_base = document.createElement('p');
-project_desc_base.classList = 'project-desc';
-
 document.addEventListener('DOMContentLoaded', () => {
     fetch_projects().then(data => {
         var projects = data;
         console.log(data);
         for(let i = 0; i < projects.length; i++)
         {
-            //instantiate a clone of project_div_base and project_div_a_container
-            let project_div_a_container = project_div_a_container_base.cloneNode();
-            let project_div = project_div_base.cloneNode();
-
-            //2 divs in the head of the project block
-            let head_div_1 = project_div_base.cloneNode();
-            head_div_1.classList = 'project-div-half left';
-            project_div.appendChild(head_div_1);
-            let head_div_2 = project_div_base.cloneNode();
-            head_div_2.classList = 'project-div-half right';
-            project_div.appendChild(head_div_2);
-
+            let project_box_base = document.getElementById("project-box-model").cloneNode(true);
 
             //title
-            let project_title = project_title_base.cloneNode();
+            let project_title = project_box_base.querySelector(".project-title");
             project_title.innerHTML = projects[i].name;
-            head_div_1.appendChild(project_title);
-
-            //icon new tab
-            let newtab_img = newtab_img_base.cloneNode();
-            head_div_2.appendChild(newtab_img);
 
             //description
-            let project_desc = project_desc_base.cloneNode();
+            let project_desc = project_box_base.querySelector(".project-desc");
             project_desc.innerHTML = projects[i].description;
-            
-            project_div.appendChild(project_desc);
 
-            project_desc = project_desc_base.cloneNode();
-            project_desc.classList += " creation-date";
+            project_desc = project_box_base.querySelector(".project-desc.creation-date");
             let creation_date = new Date(projects[i].created_at);
             project_desc.innerHTML += creation_date.toLocaleDateString();
-            project_div.appendChild(project_desc);
 
-            //add link to a
-            project_div_a_container.href = projects[i].html_url;
-            project_div_a_container.target = '_blank';
+            //add link to box <a>
+            project_box_base.href = projects[i].html_url;
             
-            //append div to a and a to table
-            project_div_a_container.appendChild(project_div);
-            document.getElementById("projects-table").appendChild(project_div_a_container);
+            //append box to table
+            project_box_base.removeAttribute("id");
+            project_box_base.removeAttribute("hidden");
+            document.getElementById("projects-table").appendChild(project_box_base);
         }
-        
+        document.getElementById("project-box-model").remove();
     });
 });
