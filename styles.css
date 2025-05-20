@@ -55,9 +55,9 @@ a:hover{
 .newtab-icon{
     display: inline-block;
     width: 2em;
-    vertical-align: middle;
     text-align: right;
     padding: 1em;
+    opacity: 50%;
 }
 
 /*
@@ -74,19 +74,23 @@ flex chaos
     gap: 1em;
     justify-content: flex-start;
 }
-.project-div{
+.project-box{
+    flex-basis: 100%;
     white-space: normal;
-    width: 32%;
-    min-width: 30em;
-    height: 15em;
+    width:auto;
+    height: 10em;
     background-color: rgb(22, 22, 22);
     border-style: solid;
     border-color: rgb(218, 187, 128);
     text-align: justify;
+    box-sizing: border-box;
 }
 .project-title{
     text-align: left;
     padding: 1em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
 }
 .project-desc{
     padding-right: 1rem;
@@ -94,9 +98,15 @@ flex chaos
     margin-block-start: 0;
 }
 .project-div-half{
-    width: 50%;
+    
     display: inline-block;
     margin: auto;
     white-space: nowrap;
     text-align: right;
+}
+.project-div-half.left{
+    width: 66%;
+}
+.project-div-half.right{
+    width: 34%;
 }
