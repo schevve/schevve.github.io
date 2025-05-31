@@ -12,7 +12,7 @@ async function fetch_projects() {
 document.addEventListener('DOMContentLoaded', () => {
     fetch_projects().then(data => {
         var projects = data;
-        console.log(data);
+        projects.sort(DateCompare);
         for(let i = 0; i < projects.length; i++)
         {
             let project_box_base = document.getElementById("project-box-model").cloneNode(true);
@@ -25,9 +25,12 @@ document.addEventListener('DOMContentLoaded', () => {
             let project_desc = project_box_base.querySelector(".project-desc");
             project_desc.innerHTML = projects[i].description;
 
-            project_desc = project_box_base.querySelector(".project-desc.creation-date");
+            let project_desc_created_date = project_box_base.querySelector(".project-desc.creation-date").querySelector(".created-date-span");
+            let project_desc_updated_date = project_box_base.querySelector(".project-desc.creation-date").querySelector(".updated-date-span");
             let creation_date = new Date(projects[i].created_at);
-            project_desc.innerHTML += creation_date.toLocaleDateString();
+            let updated_date = new Date(projects[i].updated_at);
+            project_desc_created_date.innerHTML += creation_date.toLocaleDateString();
+            project_desc_updated_date.innerHTML += updated_date.toLocaleDateString();
 
             //add link to box <a>
             project_box_base.href = projects[i].html_url;
@@ -40,3 +43,10 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById("project-box-model").remove();
     });
 });
+
+function DateCompare(a, b){
+    let dateA = new Date(a.updated_at);
+    let dateB = new Date(b.updated_at);
+    console.log(dateB.getTime() - dateA.getTime());
+    return (dateB.getTime() - dateA.getTime());
+}

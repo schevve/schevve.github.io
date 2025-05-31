@@ -84,7 +84,6 @@ flex chaos
     border-color: rgb(218, 187, 128);
     text-align: justify;
     box-sizing: border-box;
-    position: relative;
 }
 .project-title{
     text-align: left;
@@ -94,6 +93,7 @@ flex chaos
     margin: 0;
 }
 .project-desc{
+    width: 100%;
     padding-right: 1rem;
     padding-left: 1rem;
     margin-block-start: 0;
@@ -101,15 +101,20 @@ flex chaos
     overflow: hidden;
 }
 .project-desc.creation-date{
-    position: absolute;
+    box-sizing: border-box;
     bottom: 0;
+    position: absolute;
 }
 .project-info-container{
+    position: relative;
     display: flex;
+    align-content: flex-start;
     flex-wrap: wrap;
+    height: 100%;
 }
 .project-div-half{
-    margin: auto;
+    height: fit-content;
+    margin: 0;
     white-space: nowrap;
 }
 .project-div-half.left{
