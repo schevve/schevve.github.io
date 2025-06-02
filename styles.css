@@ -1,6 +1,15 @@
 /*
 fonts, background colors, regular stuff
 */
+@media screen and (max-width: 1200px) {
+    .project-desc.creation-date{
+        position: static !important;
+    }
+    .project-box{
+        height: auto !important;
+    }
+}
+
 html{
     font-family: monospace;
     background-color: rgb(43, 43, 43);
