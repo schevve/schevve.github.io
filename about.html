@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>about schevve</title>
+        <title>sobre mim</title>
         <link rel="stylesheet" href="styles.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       </head>
@@ -9,12 +9,12 @@
         <div class="header">
           <div class="header-content">
             <div class="headerhalf">
-              <h1>about me</h1>
+              <h1 id="header-title"></h1>
             </div>
             <div class="headerhalf contacts">
-              <h1>
-                <a href="/about.html" target="_self">
-                  <input class="about-button" type="image" title="About" src="static/info.png"/>
+              <div id="contacts-container">
+                <a href="/" target="_self">
+                  <input class="about-button" type="image" title="Home" src="static/home.png"/>
                 </a>
                 <a href="https://github.com/schevve" target="_blank">
                   <input class="about-button" type="image" title="GitHub" src="static/github-mark.png"/>
@@ -22,9 +22,13 @@
                 <a href="https://instagram.com/samuelschewe" target="_blank">
                   <input class="about-button" type="image" title="Instagram" src="static/Instagram_Glyph_Black.png"/>
                 </a>
-              </h1>
+              </div>
             </div>
           </div>
         </div>
+        <section id="about-section">
+          <img src="static/Gadsden.png" id="about-section-img">
+        </section>
+        <script src="js/about.js" type="module"></script>
       </body>
 </html>

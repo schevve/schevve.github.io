@@ -20,6 +20,7 @@ body{
     width: 100%;
     margin: auto;
     white-space: nowrap;
+    overflow-y: scroll;
 }
 
 .header{
@@ -53,12 +54,17 @@ a:hover{
     color: white
 }
 
+#contacts-container{
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+}
 .contacts{
     text-align: right;
     filter: sepia(1);
 }
 .about-button{
-    width: 2em;
+    width: 3em;
     vertical-align: middle;
 }
 .newtab-icon{
@@ -116,4 +122,25 @@ a:hover{
     width: 100%;
     padding-right: 1rem;
     padding-left: 1rem;
+}
+
+#about-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.about-section-body{
+    width: 80%;
+    font-size: larger;
+    white-space: normal;
+    line-height: 1.5;
+    text-align: justify;
+    hyphens: auto;
+}
+#about-section-img{
+    position: absolute;
+    top: 0;
+    opacity: 0.05;
+    z-index: -1;
 }
