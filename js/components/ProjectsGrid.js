@@ -1,4 +1,4 @@
-import { Project } from "./project.js";
+import { Project } from "./Project.js";
 
 /**
  * Returns a section with title and a grid
