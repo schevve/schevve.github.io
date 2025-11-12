@@ -2,15 +2,17 @@ import { fetchProjects } from "./content/fetchProjects.js";
 import content_pt from "./content/texts_pt.js";
 import content_en from "./content/texts_en.js";
 import { ProjectsGrid } from "./components/ProjectsGrid.js";
+import dateCompare from "./content/dateCompare.js";
 
 async function init(){
     const body = document.body;
     const raw_data = await fetchProjects();
+    raw_data.sort(dateCompare);
     const data = raw_data.map(data => ({
         title_text: data.name,
         description_text: data.description,
-        updated_at_text: data.pushed_at,
-        created_at_text: data.created_at,
+        updated_at_text: new Date(data.pushed_at).toLocaleDateString(),
+        created_at_text: new Date(data.created_at).toLocaleDateString(),
         link_text: data.html_url,
     }));
     let content;
@@ -30,10 +32,4 @@ if (document.readyState == "loading"){
     document.addEventListener('DOMContentLoaded', init);
 } else {
     init();
-}
-
-function DateCompare(a, b){
-    let dateA = new Date(a.pushed_at);
-    let dateB = new Date(b.pushed_at);
-    return (dateB.getTime() - dateA.getTime());
 }
