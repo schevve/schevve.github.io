@@ -29,8 +29,8 @@ export function Project({title_text, description_text, updated_at_text, created_
     const dates = document.createElement("p");
     dates.className = "project-dates-text";
     dates.textContent = content.projects.block_description_dates;
-    dates.textContent.replace("{updated_at}", updated_at_text);
-    dates.textContent.replace("{created_at}", created_at_text);
+    dates.textContent = dates.textContent.replace("{updated_at}", updated_at_text);
+    dates.textContent = dates.textContent.replace("{created_at}", created_at_text);
     container.appendChild(dates);
 
     return container;    
