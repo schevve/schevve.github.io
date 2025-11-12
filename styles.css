@@ -69,21 +69,20 @@ a:hover{
     opacity: 50%;
 }
 
-/*
-flex chaos
-*/
-.projects-section{
+#projects-section{
     width: 80%;
     margin: auto;
     padding-bottom: 1em;
 }
-.projects-table{
+#projects-grid{
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
     justify-content: flex-start;
 }
 .project-box{
+    display: flex;
+    flex-direction: column;
     flex-basis: 100%;
     white-space: normal;
     width:auto;
@@ -101,7 +100,7 @@ flex chaos
     text-overflow: ellipsis;
     margin: 0;
 }
-.project-desc{
+.project-description{
     width: 100%;
     padding-right: 1rem;
     padding-left: 1rem;
@@ -109,27 +108,12 @@ flex chaos
     max-height: 3.5em;
     overflow: hidden;
 }
-.project-desc.creation-date{
-    box-sizing: border-box;
-    bottom: 0;
-    position: absolute;
-}
-.project-info-container{
-    position: relative;
+.project-top-container{
     display: flex;
-    align-content: flex-start;
-    flex-wrap: wrap;
-    height: 100%;
+    justify-content: space-between;
 }
-.project-div-half{
-    height: fit-content;
-    margin: 0;
-    white-space: nowrap;
-}
-.project-div-half.left{
-    width: 75%;
-}
-.project-div-half.right{
-    width: 25%;
-    text-align: right;
+.project-dates-text{
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
 }
